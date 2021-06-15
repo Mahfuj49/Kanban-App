@@ -1,0 +1,258 @@
+:root {
+  --bg: #ebf0f7;
+  --header: #fbf4f6;
+  --text: #2e2e2f;
+  --white: #ffffff;
+  --light-grey: #c4cad3;
+  --dark-grey: #a7a7a7;
+  --tag-1: #ceecfd;
+  --tag-1-text: #2e87ba;
+  --tag-2: #d6ede2;
+  --tag-2-text: #13854e;
+  --tag-3: #ceecfd;
+  --tag-3-text: #2d86ba;
+  --tag-4: #f2dcf5;
+  --tag-4-text: #a734ba;
+  --purple: #7784ee;
+  --black: #000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  color: var(--text);
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  background-color: var(--bg);
+}
+
+@mixin display {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.project {
+  padding: 5rem;
+  width: 100vw;
+  display: block;
+
+  &-info {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-bottom: 1rem solid var(--light-grey);
+
+    &_heading {
+      text-transform: uppercase;
+      color: var(--light-grey);
+      padding-bottom: 2.5rem;
+    }
+
+    &_input {
+      position: relative;
+      width: 40rem;
+      height: 3rem;
+      border: none;
+      border-bottom: 2px solid var(--dark-grey);
+      margin-bottom: 3rem;
+      background-color: transparent;
+      font-size: 2.5rem;
+      display: block;
+      color: var(--dark-grey);
+
+      &::placeholder {
+        font-size: 2.5rem;
+        color: var(--light-grey);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &_label {
+      position: absolute;
+      bottom: 8px;
+      color: var(--dark-grey);
+      visibility: hidden;
+      opacity: 0;
+      transition: all .1s;
+    }
+
+    &_input:focus + &_label {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    grid-column-gap: 1.5rem;
+  }
+
+  &-column {
+    position: relative;
+
+    &-heading {
+      margin-bottom: 1.5rem;
+      @include display;
+      justify-content: space-between;
+
+      &__title {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: var(--light-grey);
+      }
+    }
+  }
+
+  &-tasks {
+    overflow-y: visible;
+    height: 73vh;
+    border-radius: 10px;
+  }
+}
+
+.task {
+  cursor: move;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  margin-bottom: 1rem;
+  border: 3px dashed transparent;
+
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+    border-color: rgba(162, 179, 207, 0.2) !important;
+  }
+
+  p {
+    font-size: 15px;
+    margin: 1.2rem 0;
+  }
+
+  &__tag {
+    border-radius: 100px;
+    padding: 2px 13px;
+    font-size: 12px;
+
+    &--copyright {
+      color: var(--tag-4-text);
+      background-color: var(--tag-4);
+    }
+
+    &--design {
+      color: var(--tag-3-text);
+      background-color: var(--tag-3);
+    }
+
+    &--illustration {
+      color: var(--tag-2-text);
+      background-color: var(--tag-2);
+    }
+  }
+
+  &__tags {
+    width: 100%;
+    @include display;
+    justify-content: space-between;
+  }
+
+  &__stats {
+    position: relative;
+    width: 100%;
+    color: var(--dark-grey);
+    font-size: 12px;
+
+    span:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+
+    // svg {
+    //   margin-right: 5px;
+    // }
+  }
+}
+
+time {
+  display: block;
+  color: var(--light-grey);
+}
+
+@media only screen and (max-width: 1300px) {
+  .project {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .project-column:nth-child(2),
+  .project-column:nth-child(3) {
+    display: none;
+  }
+  .project-tasks {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .project-column:nth-child(4) {
+    display: none;
+  }
+
+  .project-tasks {
+    grid-template-columns: 1fr;
+  }
+
+  .task-details {
+    flex-wrap: wrap;
+    padding: 3rem 1rem;
+  }
+
+  .tag-progress,
+  .task-activity {
+    flex-basis: 100%;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}
+
+//styling the scrollbar
+::-webkit-scrollbar {
+  width: 0;
+}
+
+// down arrow
+.arrow {
+  padding: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+// UTILITIES--------------------------
+.hide {
+  display: none;
+}
