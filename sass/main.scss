@@ -91,7 +91,7 @@ h1 {
       color: var(--dark-grey);
       visibility: hidden;
       opacity: 0;
-      transition: all .1s;
+      transition: all 0.1s;
     }
 
     &_input:focus + &_label {
@@ -102,7 +102,7 @@ h1 {
 
   &-columns {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(4, 1fr);
     width: 100%;
     grid-column-gap: 1.5rem;
   }
@@ -255,4 +255,44 @@ time {
 // UTILITIES--------------------------
 .hide {
   display: none;
+}
+
+// components------------------------
+.new-column {
+  &_button {
+    width: 30rem;
+    height: 5rem;
+    background-color: var(--light-grey);
+    border: 1px solid #c7c7c7;
+    font-size: 1.6rem;
+    color: #8d8c8c;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &_input {
+    width: 30rem;
+    height: 5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #8d8c8c;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: 1.6rem;
+    }
+  }
+
+  &_icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #8d8c8c;
+  }
 }

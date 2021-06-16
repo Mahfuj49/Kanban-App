@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.comp.css">
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" href="css/fontawesome.min.css">
   <title>Kanban APP</title>
 </head>
 
@@ -28,272 +26,29 @@
 
     <div class='project-columns'>
 
-      <!-- TASKS COLUMN -->
-
-      <div class="project-column">
-
-        <div class='project-column-heading'>
-          <h2 class='project-column-heading__title'>Task Ready</h2><button class='project-column-heading__options'></button>
-        </div>
-
-        <div class="project-tasks">
-
-          <!-- --------------------- TASK ----------------------->
-
-          <div class='task' draggable='true'>
-
-            <div class='task__tags'>
-
-              <span class='task__tag task__tag--copyright'>Copywriting</span>
-
-            </div>
-
-            <p>Konsep hero title yang menarik</p>
-
-            <div class='task__stats'>
-
-              <span><time datetime="2021-11-24T20:00:00"><i class="icon-basic-flag1"></i> Nov 24</time></span>
-
-            </div>
-
-          </div>
-
-          <!------------------x--------------------->
-
-          <!----------------------- TASK ----------------------->
-
-          <div class='task' draggable='true'>
-
-            <div class='task__tags'>
-
-              <span class='task__tag task__tag--copyright'>Copywriting</span>
-
-            </div>
-
-            <p>Konsep hero title yang menarik</p>
-
-            <div class='task__stats'>
-
-              <span><time datetime="2021-11-24T20:00:00"><i class="icon-basic-flag1"></i> Nov 24</time></span>
-
-            </div>
-
-          </div>
-
-          <!------------------x--------------------->
-
-          <!----------------------- TASK ----------------------->
-
-          <div class='task' draggable='true'>
-
-            <div class='task__tags'>
-
-              <span class='task__tag task__tag--copyright'>Copywriting</span>
-
-            </div>
-
-            <p>Konsep hero title yang menarik</p>
-
-            <div class='task__stats'>
-
-              <span><time datetime="2021-11-24T20:00:00"><i class="icon-basic-flag1"></i> Nov 24</time></span>
-
-            </div>
-          </div>
-
-          <!------------------x------------------- -->
-
-          <!----------------------- TASK ----------------------->
-
-          <div class='task' draggable='true'>
-
-            <div class='task__tags'>
-
-              <span class='task__tag task__tag--copyright'>Copywriting</span>
-
-            </div>
-
-            <p>Konsep hero title yang menarik</p>
-
-            <div class='task__stats'>
-
-              <span><time datetime="2021-11-24T20:00:00"><i class="icon-basic-flag1"></i> Nov 24</time></span>
-
-            </div>
-          </div>
-
-          <!------------------x--------------------->
-
-          <!----------------------- TASK ----------------------->
-
-          <div class='task' draggable='true'>
-
-            <div class='task__tags'>
-
-              <span class='task__tag task__tag--copyright'>Copywriting</span>
-
-            </div>
-
-            <p>Konsep hero title yang menarik</p>
-
-            <div class='task__stats'>
-
-              <span><time datetime="2021-11-24T20:00:00"><i class="icon-basic-flag1"></i> Nov 24</time></span>
-
-            </div>
-          </div>
-
-          <!------------------x--------------------->
-
-          <!----------------------- TASK ----------------------->
-
-          <div class='task' draggable='true'>
-
-            <div class='task__tags'>
-
-              <span class='task__tag task__tag--copyright'>Copywriting</span>
-
-            </div>
-
-            <p>Konsep hero title yang menarik</p>
-
-            <div class='task__stats'>
-
-              <span><time datetime="2021-11-24T20:00:00"><i class="icon-basic-flag1"></i> Nov 24</time></span>
-
-            </div>
-          </div>
-
-          <!------------------x--------------------->
-
-          <!----------------------- TASK ----------------------->
-
-          <div class='task' draggable='true'>
-
-            <div class='task__tags'>
-
-              <span class='task__tag task__tag--copyright'>Copywriting</span>
-
-            </div>
-
-            <p>Konsep hero title yang menarik</p>
-
-            <div class='task__stats'>
-
-              <span><time datetime="2021-11-24T20:00:00"><i class="icon-basic-flag1"></i> Nov 24</time></span>
-
-            </div>
-          </div>
-
-          <!------------------x--------------------->
-
-           <!----------------------- TASK ----------------------->
-
-           <div class='task' draggable='true'>
-
-            <div class='task__tags'>
-
-              <span class='task__tag task__tag--copyright'>Copywriting</span>
-
-            </div>
-
-            <p>Konsep hero title yang menarik</p>
-
-            <div class='task__stats'>
-
-              <span><time datetime="2021-11-24T20:00:00"><i class="icon-basic-flag1"></i> Nov 24</time></span>
-
-            </div>
-          </div>
-
-          <!------------------x--------------------->
-
-        </div>
-
-        <i class="fas fa-angle-up arrow"></i>
-        <i class="fas fa-angle-down"></i>
-
-        
+      <div class="new-column">
+        <button class="new-column_button">
+          <span>new column</span>
+          <svg class="new-column_icon" height="448pt" viewBox="0 0 448 448" width="448pt"
+            xmlns="http://www.w3.org/2000/svg">
+
+            <path
+              d="m408 184h-136c-4.417969 0-8-3.582031-8-8v-136c0-22.089844-17.910156-40-40-40s-40 17.910156-40 40v136c0 4.417969-3.582031 8-8 8h-136c-22.089844 0-40 17.910156-40 40s17.910156 40 40 40h136c4.417969 0 8 3.582031 8 8v136c0 22.089844 17.910156 40 40 40s40-17.910156 40-40v-136c0-4.417969 3.582031-8 8-8h136c22.089844 0 40-17.910156 40-40s-17.910156-40-40-40zm0 0" />
+
+          </svg>
+        </button>
+
+        <input type="text" class="new-column_input" placeholder="Enter column name">
 
       </div>
 
-      <!-------------------x-------------------->
-
-      <!-- TASKS COLUMN -->
-
-      <div class='project-column'>
-
-        <div class='project-column-heading'>
-          <h2 class='project-column-heading__title'>In Progress</h2><button class='project-column-heading__options'><i
-              class="fas fa-ellipsis-h"></i></button>
-        </div>
-
-        <!----------------------- TASK ----------------------->
-
-
-
-        <!------------------x--------------------->
-
-        <i class="fas fa-caret-down"></i>
-
-      </div>
-
-      <!-------------------x-------------------->
-
-      <!-- TASKS COLUMN -->
-
-      <div class='project-column'>
-
-        <div class='project-column-heading'>
-
-          <h2 class='project-column-heading__title'>Needs Review</h2>
-
-          <button class='project-column-heading__options'>
-            <i class="fas fa-ellipsis-h"></i>
-          </button>
-
-        </div>
-
-        <!----------------------- TASK ----------------------->
-
-
-
-        <!------------------x--------------------->
-
-        <i class="icon-arrows-down arrow arrow--down hide"></i>
-        <i class="icon-arrows-up arrow arrow--up hide"></i>
-
-      </div>
-
-      <!-------------------x-------------------->
-
-      <!-- TASKS COLUMN -->
-
-      <div class='project-column'>
-
-        <div class='project-column-heading'>
-          <h2 class='project-column-heading__title'>Done</h2><button class='project-column-heading__options'><i
-              class="fas fa-ellipsis-h"></i></button>
-        </div>
-
-        <!----------------------- TASK ----------------------->
-
-
-        <!------------------x--------------------->
-
-        <i class="icon-arrows-down arrow arrow--down hide"></i>
-        <i class="icon-arrows-up arrow arrow--up hide"></i>
-
-      </div>
-
-      <!-------------------x-------------------->
 
     </div>
 
   </main>
 
   <!-----------APP SCRIPT--------->
-  <script src="./js/app.js"></script>
+  <script src="js/app.js"></script>
   <!-------------------x-------------------->
 
 </body>
